@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="utf-8">
+        <meta name="author" content="张强">
+        <title>名片编辑</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body ng-app="Card" ng-controller="CardController">
+        <main>
+            <form ng-submit="onSubmit()">
+                <div>姓名：</div>
+                <div>
+                    <input ng-model="name" type="text" name="name" autofocus placeholder="请输入姓名">
+                </div>
+                <div>职位：</div>
+                <div>
+                    <input ng-model="title" type="text" name="title" placeholder="请输入职位">
+                </div>
+                <div>地址：</div>
+                <div>
+                    <input ng-model="address" type="text" name="address" placeholder="请输入详细地址">
+                </div>
+                <div>手机号：</div>
+                <div>
+                    <input ng-model="phone" type="text" name="phone" placeholder="请输入手机号">
+                </div>
+                <div>QQ号：</div>
+                <div>
+                    <input ng-model="qq" type="text" name="qq" placeholder="请输入QQ号">
+                </div>
+                <div>电子邮箱：</div>
+                <div>
+                    <input ng-model="email" type="text" name="email" placeholder="请输入电子邮箱地址">
+                </div>
+                <div>介绍：</div>
+                <div>
+                    <textarea id="t" ng-model="description" name="description" placeholder="请输入个人简介"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="保存">
+                </div>
+            </form>
+        </main>
+    </body>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="index.js"></script>
+</html>
