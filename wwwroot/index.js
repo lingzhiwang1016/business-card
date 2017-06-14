@@ -3,13 +3,15 @@ app.controller('CardController',($scope,$http)=>{
 	$http.get("api/card/me").then((res)=>{
 //		console.log(res.data.data);
 		var obj = res.data.data;
-		$scope.name = obj.name;
-		$scope.title= obj.title;
-		$scope.address=obj.address;
-		$scope.phone=obj.phone;
-		$scope.qq = obj.qq;
-		$scope.email=obj.email;
-		$scope.description = obj.description;
+		//$scope.name = obj.name;
+		//$scope.title= obj.title;
+		//$scope.address=obj.address;
+		//$scope.phone=obj.phone;
+		//$scope.qq = obj.qq;
+		//$scope.email=obj.email;
+		//$scope.description = obj.description;
+                //可以直接复制对象,调用angular的extend方法,将res.data.data复制给$scope,这种比较简单,不用像上面一样多次复制
+                angular.extend($scope,obj);
 	},(err)=>{
 		console.log(err);
 	});
