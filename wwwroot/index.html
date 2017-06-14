@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,18 +12,18 @@
     <main>
         <article>
             <img class="logo" src="images/logo.png" />
-            <h1>{{name}}<small>{{title}}</small></h1>
+            <h1>{{formData.name}}<small>{{formData.title}}</small></h1>
             <address>
-                <p class="addr">{{address}}</p>
-                <p class="tel">{{phone}}</p>
-                <p class="qq">{{qq}}</p>
-                <p class="email">{{email}}</p>
+                <p class="addr">{{formData.address}}</p>
+                <p class="tel">{{formData.phone}}</p>
+                <p class="qq">{{formData.qq}}</p>
+                <p class="email">{{formData.email}}</p>
             </address>
             <img class="pic" src="images/xrk.png" />
         </article>
         <aside>
             <div class="photo"></div>
-            <p>{{description}}</p>
+            <p>{{formData.description}}</p>
         </aside>
     </main>
     <div class="edit" onclick="location.href='edit.html'">编辑</div>
