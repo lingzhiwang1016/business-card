@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(express.static('wwwroot'));
 
-// 这里要用json(),否则req.body数据为空,解析不出来
+//angularjs提交的表单数据不是urlencoded编码,而是json,此处调用json方法
+//否则req.body数据为空,解析不出来
 app.use(bodyParser.json());
 
 //读取文件内容
